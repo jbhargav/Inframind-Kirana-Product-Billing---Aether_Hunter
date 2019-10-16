@@ -8,4 +8,4 @@ It takes the image process request from the web application and pre-processes th
 3.Response :
 	It takes the Response from the model, then based on these it will classify the product names and quantities, calculates the cost and returns the bill.
   
-[[https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg|alt=octocat]]
+
