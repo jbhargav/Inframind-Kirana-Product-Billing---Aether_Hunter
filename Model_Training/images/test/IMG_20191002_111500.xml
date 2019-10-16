@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>IMG_20191002_111500.jpg</filename>
+	<path>C:\tenserflow1\models\research\object_detection\images\test\IMG_20191002_111500.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>520</width>
+		<height>390</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>colgate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>160</xmin>
+			<ymin>35</ymin>
+			<xmax>261</xmax>
+			<ymax>362</ymax>
+		</bndbox>
+	</object>
+</annotation>

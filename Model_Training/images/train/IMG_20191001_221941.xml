@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>IMG_20191001_221941.jpg</filename>
+	<path>C:\tenserflow1\models\research\object_detection\images\train\IMG_20191001_221941.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>520</width>
+		<height>390</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>rin</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>228</xmin>
+			<ymin>93</ymin>
+			<xmax>318</xmax>
+			<ymax>241</ymax>
+		</bndbox>
+	</object>
+</annotation>
