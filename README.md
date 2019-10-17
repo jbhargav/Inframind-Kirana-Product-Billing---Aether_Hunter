@@ -128,10 +128,32 @@ python train.py --logtostderr --train_dir=training/ --pipeline_config_path=train
 ```
 By Running this Command we generate the checkpoint files which stores the trained data model weights after 2-3 hrs of training.
 
+<p align="center">
+  <img src="https://imgur.com/download/2ZMhsob">
+</p>
+
 ### Then we Export Inference Graph
 ```
 python export_inference_graph.py --input_type image_tensor --pipeline_config_path training/faster_rcnn_inception_v2_pets.config --trained_checkpoint_prefix training/model.ckpt-20012 --output_directory inference_graph
 ```
 This generates our final .pb file (which is our final Inference model) in inference_graph directory 
 
+# Code Explanation
+
+### Web application
+
+<p align="center">
+  <img src="https://imgur.com/download/pxzl9Tx">
+</p>
+
+After completion of the training of the model we need to create an interface to take image of products.
+By using the webcamera take the picture of products and save them in the folder "upload/".
+Then php server that is apache executes the following shell command as specified in the index.php
+```
+$p="activate tensorflow1 & cd C:\\tensorflow1\\models\\research\\object_detection & python Object_detection_image.py C:\\xampp\\htdocs\\webapp\\upload\\"."ImageName.extension";
+$out=shell_exec($p);
+ ```
+The result(List of product names,List of Products areas) will be stored in the $out varaible.
+This tuple is passed by the object_detection_image.py file.
+Then the webaplication php processes the tuple passed and generates the bill.
 
