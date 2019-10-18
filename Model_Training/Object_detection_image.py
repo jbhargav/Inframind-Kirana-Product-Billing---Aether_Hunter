@@ -1,19 +1,4 @@
 ######## Image Object Detection Using Tensorflow-trained Classifier #########
-#
-# Author: Evan Juras
-# Date: 1/15/18
-# Description: 
-# This program uses a TensorFlow-trained neural network to perform object detection.
-# It loads the classifier and uses it to perform object detection on an image.
-# It draws boxes, scores, and labels around the objects of interest in the image.
-
-## Some of the code is copied from Google's example at
-## https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb
-
-## and some is copied from Dat Tran's example at
-## https://github.com/datitran/object_detector_app/blob/master/object_detection_app.py
-
-## but I changed it to make it more understandable to me.
 
 # Import packages
 import os
@@ -41,7 +26,7 @@ CWD_PATH = os.getcwd()
 
 # Path to frozen detection graph .pb file, which contains the model that is used
 # for object detection.
-PATH_TO_CKPT = os.path.join(CWD_PATH,MODEL_NAME,'frozen_inference_graph.pb')
+PATH_TO_CKPT = os.path.join(CWD_PATH,MODEL_NAME,'frozen_inference_graph.pb') # Model
 
 # Path to label map file
 PATH_TO_LABELS = os.path.join(CWD_PATH,'training','labelmap.pbtxt')
@@ -54,9 +39,7 @@ NUM_CLASSES = 9
 
 # Load the label map.
 # Label maps map indices to category names, so that when our convolution
-# network predicts `5`, we know that this corresponds to `king`.
-# Here we use internal utility functions, but anything that returns a
-# dictionary mapping integers to appropriate string labels would be fine
+# Here we use internal utility functions
 label_map = label_map_util.load_labelmap(PATH_TO_LABELS)
 categories = label_map_util.convert_label_map_to_categories(label_map, max_num_classes=NUM_CLASSES, use_display_name=True)
 category_index = label_map_util.create_category_index(categories)
@@ -114,12 +97,12 @@ vis_util.visualize_boxes_and_labels_on_image_array(
 
 # All the results have been drawn on image. Now display the image.
 
-print (str(vis_util.clapp()))
+print (str(vis_util.clapp())) # Shell Output lables and sizes of products
 #print (str(boxes))
 
 ##
 ##cv2.imshow('Object detector', image)
-cv2.imwrite('out.jpg',image)
+cv2.imwrite('out.jpg',image) # Output image with bboxes and lables
 ##os.open('out.jpg',os.O_RDWR)
 ### Press any key to close the image
 ##cv2.waitKey(0)
